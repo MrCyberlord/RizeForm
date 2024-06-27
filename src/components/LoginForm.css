@@ -1,0 +1,51 @@
+/* src/LoginForm.css */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-form {
+  width: 300px;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  background-color: rgb(140, 213, 140);
+}
+
+.form-group {
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+
+.error {
+  color: red;
+  font-size: 0.875em;
+}
+
+button {
+  padding: 0.5em 2em;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}

@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+
 import './LoginForm.css'; 
 
 const LoginForm = () => {
@@ -13,14 +13,21 @@ const LoginForm = () => {
     const errors = {};
     if (!formState.email) {
       errors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formState.email)) {
+    } 
+    else if (!/\S+@\S+\.\S+/.test(formState.email)) {
       errors.email = 'Email address is invalid';
     }
+
     if (!formState.password) {
       errors.password = 'Password is required';
-    } else if (formState.password.length < 6) {
+    } 
+    else if (formState.password.length < 6) {
       errors.password = 'Password must be at least 6 characters';
     }
+    else if (!/(?=.*[A-Z])(?=.*\d)(?=.*\W)/.test(formState.password)) {
+      errors.password = 'Password must contain at least one uppercase letter, one number, and one symbol';
+    }
+    
     setFormState({ ...formState, errors });
     return Object.keys(errors).length === 0;
   };
